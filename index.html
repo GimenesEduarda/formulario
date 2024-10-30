@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="javinha.js"
+</head>
+<body>
+    <div class="container">
+        <form action="#" method="post" aria-labelledby="form-title">
+            <h1 id="form-title">Cadastro</h1>
+            
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+                
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" required>
+
+                <label>Gênero:</label>
+                <label><input type="radio" name="genero" value="masculino" required> Masculino</label>
+                <label><input type="radio" name="genero" value="feminino"> Feminino</label>
+                <label><input type="radio" name="genero" value="outro"> Outro</label>
+
+                <label for="nascimento">Data de Nascimento:</label>
+                <input type="date" id="nascimento" name="nascimento" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Credenciais</legend>
+                
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
+                <label for="confirmar-senha">Confirmação de Senha:</label>
+                <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirme sua senha" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Localização</legend>
+                
+<label for="estado">Estado:</label>
+<select id="estado" name="estado" required onchange="updateCities()">
+    <option value="">Selecione um estado</option>
+    <option value="ac">Acre</option>
+    <option value="al">Alagoas</option>
+    <option value="ap">Amapá</option>
+    <option value="ba">Bahia</option>
+    <option value="ce">Ceará</option>
+    <option value="df">Distrito Federal</option>
+    <option value="es">Espírito Santo</option>
+    <option value="go">Goiás</option>
+    <option value="ma">Maranhão</option>
+    <option value="mt">Mato Grosso</option>
+    <option value="ms">Mato Grosso do Sul</option>
+    <option value="mg">Minas Gerais</option>
+    <option value="pa">Pará</option>
+    <option value="pb">Paraíba</option>
+    <option value="pr">Paraná</option>
+    <option value="pe">Pernambuco</option>
+    <option value="pi">Piauí</option>
+    <option value="rj">Rio de Janeiro</option>
+    <option value="rn">Rio Grande do Norte</option>
+    <option value="rs">Rio Grande do Sul</option>
+    <option value="ro">Rondônia</option>
+    <option value="rr">Roraima</option>
+    <option value="sc">Santa Catarina</option>
+    <option value="sp">São Paulo</option>
+    <option value="se">Sergipe</option>
+    <option value="to">Tocantins</option>
+</select>
+
+<label for="cidade">Cidade:</label>
+<select id="cidade" name="cidade" required>
+    <option value="">Selecione uma cidade</option>
+    <option value="rio_branco">Rio Branco</option>
+    <option value="cruzeiro_do_sul">Cruzeiro do Sul</option>
+    <option value="maceio">Maceió</option>
+    <option value="aracaju">Arapiraca</option>
+    <option value="macapa">Macapá</option>
+    <option value="santana">Santana</option>
+    <option value="salvador">Salvador</option>
+    <option value="feira_de_santana">Feira de Santana</option>
+    <option value="fortaleza">Fortaleza</option>
+    <option value="caucaia">Caucaia</option>
+    <option value="brasilia">Brasília</option>
+    <option value="ceilandia">Ceilândia</option>
+    <option value="vitoria">Vitória</option>
+    <option value="vila_velha">Vila Velha</option>
+    <option value="goiania">Goiânia</option>
+    <option value="anapolis">Anápolis</option>
+    <option value="imperatriz">Imperatriz</option>
+    <option value="cuiaba">Cuiabá</option>
+    <option value="varzea_grande">Várzea Grande</option>
+    <option value="campo_grande">Campo Grande</option>
+    <option value="dourados">Dourados</option>
+    <option value="belo_horizonte">Belo Horizonte</option>
+    <option value="uberlandia">Uberlândia</option>
+    <option value="belem">Belém</option>
+    <option value="ananindeua">Ananindeua</option>
+    <option value="joao_pessoa">João Pessoa</option>
+    <option value="campina_grande">Campina Grande</option>
+    <option value="curitiba">Curitiba</option>
+    <option value="londrina">Londrina</option>
+    <option value="recife">Recife</option>
+    <option value="olinda">Olinda</option>
+    <option value="teresina">Teresina</option>
+    <option value="parnaiba">Parnaíba</option>
+    <option value="rio_de_janeiro">Rio de Janeiro</option>
+    <option value="niteroi">Niterói</option>
+    <option value="natal">Natal</option>
+    <option value="mossoro">Mossoró</option>
+    <option value="porto_alegre">Porto Alegre</option>
+    <option value="caxias_do_sul">Caxias do Sul</option>
+    <option value="porto_velho">Porto Velho</option>
+    <option value="ji_parana">Ji-Paraná</option>
+    <option value="boa_vista">Boa Vista</option>
+    <option value="florianopolis">Florianópolis</option>
+    <option value="joinville">Joinville</option>
+    <option value="sao_paulo">São Paulo</option>
+    <option value="campinas">Campinas</option>
+    <option value="aracaju">Aracaju</option>
+    <option value="palmas">Palmas</option>
+    <option value="Uruguaiana">Uruguaiana</option>
+</select>
+
+            </fieldset>
+
+            <label for="descricao">Descrição Pessoal:</label>
+            <textarea id="descricao" name="descricao" placeholder="Fale um pouco sobre você" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

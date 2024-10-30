@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #8840e6; 
+    margin: 0;
+    padding: 20px;
+}
+
+form {
+    background: #e2e2e2; 
+    color: #333333; 
+    border-radius: 10px; 
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); 
+    max-width: 500px;
+    margin: auto;
+    padding: 40px;
+}
+
+legend {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #8840e6; 
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 600; 
+    color: #555555; /
+}
+
+select,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc; 
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f4f4f9; 
+    color: #333333; 
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-color: #8840e6;
+    box-shadow: 0 0 5px rgba(136, 64, 230, 0.5);
+    outline: none;
+}
+
+button {
+    background-color: #8840e6; 
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #732db4; 
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+textarea {
+    resize: vertical; 
+}
+
+@media (max-width: 600px) {
+    form {
+        padding: 20px; /
+    }
+}
